@@ -1,0 +1,38 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "migrate:up": "node migrate.js up",
+    "migrate:down": "node migrate.js down",
+    "debug:dev": "nodemon --signal SIGHUP --inspect=9229 src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Zúñiga <krlos2290@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
+    "ajv": "^6.12.6",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.0",
+    "dayjs": "^1.9.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "migrate": "^1.7.0",
+    "mongoose": "^5.10.12",
+    "mongoose-timestamp": "^0.6.0",
+    "multer": "^1.4.2",
+    "sharp": "^0.26.3",
+    "uuid": "^8.3.1",
+    "validator": "^13.1.17",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
