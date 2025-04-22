@@ -1,41 +1,30 @@
 # Task Manager API
 
-A simple and secure RESTful API for managing personal tasks, built with **ASP.NET Core**, **Entity Framework Core**, and **JWT authentication**.
+## Getting Started
 
-## 🔧 Features
+### Requirements
+- [NodeJS](https://nodejs.org/en/)@v12.18.4
+- [NVM](https://github.com/nvm-sh/nvm)@v0.37.2
 
-- User registration & login (JWT-based authentication)
-- CRUD operations for personal tasks
-- Task filtering (by completion status)
-- Protected endpoints
-- In-memory database (easy to swap with SQL Server)
-- Swagger documentation
+### Installation
+- `nvm use` - If NodeJS version is not found you can install it by running `nvm install v12.18.4`
 
----
 
-## 🛠️ Tech Stack
+### Environment Variables
+- Create a copy of the file `.env.example` and update each variable value.
+- Please notice that the MongoDB Connection String is stored in this variable: `MONGO_DB_CONN_STRING=`
 
-- ASP.NET Core Web API (.NET 6/7)
-- Entity Framework Core (InMemory provider)
-- JWT (JSON Web Token) Authentication
-- BCrypt for password hashing
-- Swagger for API documentation
-- Postman for endpoint testing
+### Commands
 
----
+#### Developer Mode
+- `npm run dev` - Developer Mode
 
-## 📦 Getting Started
+#### Others
+- `npm start` - Run the application (no failover restore)
+- `npm run migrate:up` - Run migrations up
+- `npm run migrate:down` - Run migrations down/rollback
+- `npm run debug:dev` - Run developer mode allowing `debugger` code via Chrome Inspector.
+- `npm test` - Unit tests not setup. Any unit test created.
 
-### 1. Clone the repository
-git clone https://github.com/yourusername/task-manager-api.git
-cd task-manager-api
-
-### 2. Install dependancies
-dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
-dotnet add package Microsoft.EntityFrameworkCore.InMemory
-dotnet add package BCrypt.Net-Next
-
-### 3. Run the application
-dotnet run
-
-The API will be available at: https://localhost:5001/swagger
+### Credits
+- [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
